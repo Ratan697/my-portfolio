@@ -109,3 +109,10 @@ body {
 @layer base {
     * { @apply border-gray-800; }
 }
+
+/* Hide native cursor completely on desktop */
+@media (pointer: fine) {
+    *, *::before, *::after {
+        cursor: none !important;
+    }
+}

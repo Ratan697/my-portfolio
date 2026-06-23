@@ -24,7 +24,7 @@ export default function Contact() {
           {[
             { id: "email", label: "Email", icon: Mail, href: "mailto:hello@ratan.dev" },
             { id: "linkedin", label: "LinkedIn", icon: FiLinkedin, href: "#" },
-            { id: "github", label: "GitHub", icon: FiGithub, href: "#" },
+            { id: "github", label: "GitHub", icon: FiGithub, href: "https://github.com/Ratan697" },
             { id: "dribbble", label: "Dribbble", icon: FiDribbble, href: "#" },
           ].map(({ id, label, icon: Icon, href }) => (
             <a key={id} href={href} data-testid={`contact-social-${id}`} className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm text-white/80 hover:bg-white hover:text-black hover:border-white transition-all duration-300">
