@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Mail } from "lucide-react";
-import { FiLinkedin, FiGithub, FiDribbble } from "react-icons/fi";
+import { FiLinkedin, FiGithub } from "react-icons/fi";
+import { TbBrandFiverr } from "react-icons/tb"; // Added Tabler Icons for Fiverr
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } } };
 
@@ -25,7 +26,7 @@ export default function Contact() {
             { id: "email", label: "Email", icon: Mail, href: "mailto:hello@ratan.dev" },
             { id: "linkedin", label: "LinkedIn", icon: FiLinkedin, href: "#" },
             { id: "github", label: "GitHub", icon: FiGithub, href: "https://github.com/Ratan697" },
-            { id: "dribbble", label: "Dribbble", icon: FiDribbble, href: "#" },
+            { id: "fiverr", label: "Fiverr", icon: TbBrandFiverr, href: "https://www.fiverr.com/ratan76/buying?source=avatar_menu_profile" },
           ].map(({ id, label, icon: Icon, href }) => (
             <a key={id} href={href} data-testid={`contact-social-${id}`} className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm text-white/80 hover:bg-white hover:text-black hover:border-white transition-all duration-300">
               <Icon className="w-4 h-4" strokeWidth={1.5} />
