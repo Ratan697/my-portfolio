@@ -200,7 +200,7 @@ export default function Work() {
             initial="hidden"
             animate="show"
             exit="exit"
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+            className="fixed inset-0 z-60 flex items-center justify-center p-4 md:p-8"
             style={{ background: "rgba(0,0,0,0.85)", backdropFilter: "blur(14px)" }}
             onClick={closeModal}
           >
