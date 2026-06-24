@@ -149,9 +149,8 @@ export default function Work() {
                 delay: idx * 0.08,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className={`work-card group block rounded-2xl border border-white/8 bg-white/[0.02] p-5 hover:border-white/20 ${
-                idx % 2 === 1 ? "md:mt-16" : ""
-              }`}
+              className={`work-card group block rounded-2xl border border-white/8 bg-white/[0.02] p-5 hover:border-white/20 ${idx % 2 === 1 ? "md:mt-16" : ""
+                }`}
             >
               <div className="thumb w-full aspect-[4/3] rounded-xl overflow-hidden bg-black/40 relative">
                 <img
@@ -200,7 +199,8 @@ export default function Work() {
             initial="hidden"
             animate="show"
             exit="exit"
-            className="fixed inset-0 z-60 flex items-center justify-center p-4 md:p-8"
+            // Change z-50 to z-[60] right here 👇
+            className="fixed inset-0 z-[999] flex items-center justify-center p-4 md:p-8"
             style={{ background: "rgba(0,0,0,0.85)", backdropFilter: "blur(14px)" }}
             onClick={closeModal}
           >
@@ -228,7 +228,7 @@ export default function Work() {
               {/* Site Preview Only */}
               <div
                 className="w-full h-full rounded-xl overflow-hidden border border-white/10 flex flex-col"
-                style={{ background: "#0a0a0f" }}
+                style={{ background: "#ffffff" }}
               >
                 <SitePreview src={activeProject.siteUrl} />
               </div>

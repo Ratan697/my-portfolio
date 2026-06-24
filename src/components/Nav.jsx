@@ -5,7 +5,7 @@ export default function Nav({ activeSection, onNavigate }) {
   const links = ["home", "about", "work", "contact"];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-6 mix-blend-difference pointer-events-auto">
+    <nav className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-10 py-6 mix-blend-difference pointer-events-auto">
       {/* Increased size from text-xl to text-2xl here */}
       <div 
         className="text-2xl font-serif text-white cursor-pointer" 
