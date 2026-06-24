@@ -23,8 +23,8 @@ export default function Contact() {
         </motion.a>
         <motion.div variants={fadeUp} className="mt-16 flex flex-wrap gap-3">
           {[
-            { id: "email", label: "Email", icon: Mail, href: "mailto:hello@ratan.dev" },
-            { id: "linkedin", label: "LinkedIn", icon: FiLinkedin, href: "#" },
+            { id: "email", label: "Email", icon: Mail, href: "mailto:ratanjana7600@gmail.com" },
+            { id: "linkedin", label: "LinkedIn", icon: FiLinkedin, href: "https://www.linkedin.com/in/ratan-jana670/" },
             { id: "github", label: "GitHub", icon: FiGithub, href: "https://github.com/Ratan697" },
             { id: "fiverr", label: "Fiverr", icon: TbBrandFiverr, href: "https://www.fiverr.com/ratan76/buying?source=avatar_menu_profile" },
           ].map(({ id, label, icon: Icon, href }) => (
