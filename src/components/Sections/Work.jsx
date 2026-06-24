@@ -13,8 +13,6 @@ const projects = [
     img: "localstock-banner.png",
     siteUrl: "https://localstock.pages.dev",
     siteLabel: "localstock.pages.dev",
-    assistantSrc: "/localstock-assistant.html",
-    assistantLabel: "localstock-assistant.html",
   },
   {
     id: "resell",
@@ -26,8 +24,6 @@ const projects = [
     img: "resell-banner.png",
     siteUrl: "https://resell-1zn.pages.dev",
     siteLabel: "resell-1zn.pages.dev",
-    assistantSrc: "/resell-assistant.html",
-    assistantLabel: "resell-assistant.html",
   },
   {
     id: "replykaro",
@@ -39,8 +35,6 @@ const projects = [
     img: "replykaro-banner.png",
     siteUrl: "https://replykaro.co.in",
     siteLabel: "replykaro.co.in",
-    assistantSrc: "https://replykaro.co.in/chat",
-    assistantLabel: "replykaro.co.in/chat",
   },
 ];
 
@@ -75,16 +69,6 @@ const modalVariants = {
   },
 };
 
-const panelVariants = {
-  hidden: { opacity: 0, x: 40 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.45, delay: 0.18, ease: [0.22, 1, 0.36, 1] },
-  },
-  exit: { opacity: 0, x: 30, transition: { duration: 0.2 } },
-};
-
 // Site preview iframe
 function SitePreview({ src }) {
   return (
@@ -97,7 +81,6 @@ function SitePreview({ src }) {
     />
   );
 }
-
 
 export default function Work() {
   const [activeProject, setActiveProject] = useState(null);
@@ -228,7 +211,8 @@ export default function Work() {
               animate="show"
               exit="exit"
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-[1100px] flex flex-col md:flex-row gap-3 rounded-2xl overflow-hidden"
+              // Adjusted max-width to look good as a single window
+              className="relative w-full max-w-5xl flex flex-col gap-3 rounded-2xl overflow-hidden"
               style={{ height: "min(86vh, 780px)" }}
             >
               {/* Close */}
@@ -241,44 +225,13 @@ export default function Work() {
                 <X className="w-4 h-4" strokeWidth={1.5} />
               </button>
 
-              {/* Left — site preview (40%) */}
+              {/* Site Preview Only */}
               <div
-                className="flex-[2] h-full rounded-xl overflow-hidden border border-white/10 flex flex-col"
+                className="w-full h-full rounded-xl overflow-hidden border border-white/10 flex flex-col"
                 style={{ background: "#0a0a0f" }}
               >
                 <SitePreview src={activeProject.siteUrl} />
               </div>
-
-              {/* Right — assistant (60%) */}
-              <motion.div
-                variants={panelVariants}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                className="flex-[3] rounded-xl overflow-hidden border border-white/10 flex flex-col"
-                style={{ background: "#0a0a0f", minWidth: 0 }}
-              >
-                <div
-                  className="flex items-center gap-2 px-4 h-10 border-b border-white/8 shrink-0"
-                  style={{ background: "rgba(255,255,255,0.03)" }}
-                >
-                  <div className="flex gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#ff5f57" }} />
-                    <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#febc2e" }} />
-                    <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#28c840" }} />
-                  </div>
-                  <span className="text-white/30 text-[10px] font-mono tracking-wide ml-2 truncate">
-                    {activeProject.assistantLabel}
-                  </span>
-                </div>
-                <iframe
-                  src={activeProject.assistantSrc}
-                  title="Assistant"
-                  className="flex-1 w-full"
-                  style={{ border: "none" }}
-                  sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-                />
-              </motion.div>
             </motion.div>
           </motion.div>
         )}
