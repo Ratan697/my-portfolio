@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Mail } from "lucide-react";
-import { FiLinkedin, FiGithub, FiDribbble } from "react-icons/fi";
+import { FiLinkedin, FiGithub,} from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } } };
