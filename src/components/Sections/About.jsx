@@ -53,7 +53,7 @@ export default function About() {
       {/* Top Row: Header & Text */}
       <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-20">
         <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }} className="lg:col-span-5">
-          <motion.p variants={fadeUp} className="label-cap mb-6">02 — About</motion.p>
+          <motion.p variants={fadeUp} className="label-cap mb-6">04 — About</motion.p>
           <motion.h2 variants={fadeUp} className="font-serif-display text-white" style={{ fontSize: "clamp(38px, 5vw, 64px)", lineHeight: 1.02, fontWeight: 300 }}>
             Building things <br />
             <span className="italic text-[color:var(--accent-amber)]/90">that help</span> people.

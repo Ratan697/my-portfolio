@@ -95,7 +95,7 @@ export default function Work() {
   return (
     <>
       <section
-        id="work"
+        id="selected-work"
         data-testid="section-work"
         className="relative min-h-screen w-full px-6 md:px-24 lg:px-32 py-32"
       >
@@ -107,7 +107,7 @@ export default function Work() {
         >
           <div>
             <motion.p variants={fadeUp} className="label-cap mb-4">
-              03 — Selected Work
+              Best Works
             </motion.p>
             <motion.h2
               variants={fadeUp}
@@ -199,7 +199,6 @@ export default function Work() {
             initial="hidden"
             animate="show"
             exit="exit"
-            // Change z-50 to z-[60] right here 👇
             className="fixed inset-0 z-[999] flex items-center justify-center p-4 md:p-8"
             style={{ background: "rgba(0,0,0,0.85)", backdropFilter: "blur(14px)" }}
             onClick={closeModal}
@@ -211,7 +210,6 @@ export default function Work() {
               animate="show"
               exit="exit"
               onClick={(e) => e.stopPropagation()}
-              // Adjusted max-width to look good as a single window
               className="relative w-full max-w-5xl flex flex-col gap-3 rounded-2xl overflow-hidden"
               style={{ height: "min(86vh, 780px)" }}
             >

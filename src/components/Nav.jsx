@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function Nav({ activeSection, onNavigate }) {
-  const links = ["home", "about", "work", "contact"];
+  const links = ["home", "work", "contact", "about"];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-10 py-6 mix-blend-difference pointer-events-auto">

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Mail } from "lucide-react";
-import { FiLinkedin, FiGithub } from "react-icons/fi";
-import { TbBrandFiverr } from "react-icons/tb"; // Added Tabler Icons for Fiverr
+import { FiLinkedin, FiGithub, FiDribbble } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } } };
 
@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <section id="contact" data-testid="section-contact" className="relative w-full px-6 md:px-24 lg:px-32 py-32 min-h-screen flex flex-col justify-between">
       <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }} className="max-w-5xl">
-        <motion.p variants={fadeUp} className="label-cap mb-6">04 — Get in touch</motion.p>
+        <motion.p variants={fadeUp} className="label-cap mb-6">03 — Get in touch</motion.p>
         <motion.h2 variants={fadeUp} className="font-serif-display text-white" style={{ fontSize: "clamp(48px, 8vw, 128px)", lineHeight: 0.98, fontWeight: 300 }}>
           Let&apos;s build <br />something <span className="italic text-[color:var(--accent-amber)]/95">together</span><span className="text-[color:var(--accent-amber)]">.</span>
         </motion.h2>
@@ -24,11 +24,11 @@ export default function Contact() {
         <motion.div variants={fadeUp} className="mt-16 flex flex-wrap gap-3">
           {[
             { id: "email", label: "Email", icon: Mail, href: "mailto:ratanjana7600@gmail.com" },
+            { id: "whatsapp", label: "WhatsApp", icon: FaWhatsapp, href: "https://wa.me/919907759486" },
             { id: "linkedin", label: "LinkedIn", icon: FiLinkedin, href: "https://www.linkedin.com/in/ratan-jana670/" },
             { id: "github", label: "GitHub", icon: FiGithub, href: "https://github.com/Ratan697" },
-            { id: "fiverr", label: "Fiverr", icon: TbBrandFiverr, href: "https://www.fiverr.com/ratan76/buying?source=avatar_menu_profile" },
           ].map(({ id, label, icon: Icon, href }) => (
-            <a key={id} href={href} data-testid={`contact-social-${id}`} className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm text-white/80 hover:bg-white hover:text-black hover:border-white transition-all duration-300">
+            <a key={id} href={href} target={id === "whatsapp" ? "_blank" : undefined} rel={id === "whatsapp" ? "noopener noreferrer" : undefined} data-testid={`contact-social-${id}`} className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm text-white/80 hover:bg-white hover:text-black hover:border-white transition-all duration-300">
               <Icon className="w-4 h-4" strokeWidth={1.5} />
               <span>{label}</span>
             </a>

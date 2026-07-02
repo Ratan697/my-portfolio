@@ -4,11 +4,12 @@ import CustomCursor from "./components/CustomCursor";
 import Nav from "./components/Nav";
 import { LeftRail, RightRail } from "./components/SideRails";
 import Hero from "./components/Sections/Hero";
-import About from "./components/Sections/About";
+import ProjectCards from "./components/Sections/projectCards";
 import Work from "./components/Sections/Work";
 import Contact from "./components/Sections/Contact";
+import About from "./components/Sections/About";
 
-const SECTIONS = ["home", "about", "work", "contact"];
+const SECTIONS = ["home", "work", "contact", "about"];
 
 function App() {
   const [active, setActive] = useState("home");
@@ -47,9 +48,10 @@ function App() {
 
       <main className="relative z-10">
         <Hero onExplore={() => navigate("work")} />
-        <About />
+        <ProjectCards />
         <Work />
         <Contact />
+        <About />
       </main>
     </div>
   );
