@@ -15,17 +15,6 @@ const projects = [
     siteLabel: "localstock.pages.dev",
   },
   {
-    id: "resell",
-    title: "ReSell",
-    category: "Campus Marketplace for Buying & Selling items",
-    year: "2026",
-    description:
-      "A dedicated, secure platform for college students to easily buy, sell, and trade items within their local campus community.",
-    img: "resell-banner.png",
-    siteUrl: "https://resell-1zn.pages.dev",
-    siteLabel: "resell-1zn.pages.dev",
-  },
-  {
     id: "replykaro",
     title: "ReplyKaro",
     category: "AI-Powered 24/7 Business & Service Reply Assistant",

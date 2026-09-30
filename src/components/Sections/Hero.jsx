@@ -10,12 +10,6 @@ const projects = [
         img: "localstock.png"
     },
     {
-        id: "resell",
-        title: "ReSell",
-        category: "Campus Marketplace for Buying & Selling items",
-        img: "resell.png"
-    },
-    {
         id: "replykaro",
         title: "ReplyKaro",
         category: "AI-Powered 24/7 Business & Service Reply Assistant",
@@ -62,7 +56,7 @@ function FeaturedStrip() {
                         <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
                     </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4 flex-1">
+                <div className="grid grid-cols-2 gap-4 flex-1 max-w-2xl">
                     {projects.map((p) => (
                         <a key={p.id} href="#work" data-testid={`featured-${p.id}`} className="group flex items-center gap-3 px-3 py-2.5 rounded-xl border border-white/8 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-500">
                             <div className="w-11 h-11 rounded-lg overflow-hidden shrink-0 bg-black">
