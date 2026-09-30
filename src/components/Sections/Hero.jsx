@@ -7,13 +7,15 @@ const projects = [
         id: "localstock",
         title: "LocalStock",
         category: "Real time product & Service Finding Nearby",
-        img: "localstock.png"
+        img: "localstock.png",
+        siteUrl: "https://localstock.pages.dev"
     },
     {
         id: "replykaro",
         title: "ReplyKaro",
         category: "AI-Powered 24/7 Business & Service Reply Assistant",
-        img: "replykaro.webp"
+        img: "replykaro.webp",
+        siteUrl: "https://replykaro.co.in"
     },
 ];
 
@@ -58,7 +60,14 @@ function FeaturedStrip() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 flex-1 max-w-2xl">
                     {projects.map((p) => (
-                        <a key={p.id} href="#work" data-testid={`featured-${p.id}`} className="group flex items-center gap-3 px-3 py-2.5 rounded-xl border border-white/8 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-500">
+                        <a
+                            key={p.id}
+                            href={p.siteUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-testid={`featured-${p.id}`}
+                            className="group flex items-center gap-3 px-3 py-2.5 rounded-xl border border-white/8 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-500"
+                        >
                             <div className="w-11 h-11 rounded-lg overflow-hidden shrink-0 bg-black">
                                 <img src={p.img} alt={p.title} className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition" />
                             </div>
